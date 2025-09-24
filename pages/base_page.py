@@ -200,7 +200,7 @@ class BasePage:
     
     @allure.step('Найти дочерние элементы с ожиданием')
     def find_child_elements_with_wait(self, parent, locator, timeout=10):
-        WebDriverWait(parent, timeout).until(
+        WebDriverWait(self.driver, timeout).until(
             lambda d: len(parent.find_elements(*locator)) > 0
         )
         return parent.find_elements(*locator)
