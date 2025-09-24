@@ -27,7 +27,7 @@ class TestTaxiFlow:
         "tariff_index, xfail",
         [
             (i, tariff_name != "Рабочий")  # xfail=True для всех, кроме "Рабочий"
-            for i, (_, tariff_name) in enumerate(MainPage(None).get_tariff_locators())
+            for i, (_, tariff_name) in enumerate(TestData.TARIFF_LOCATORS)
         ]
     )
     def test_tariff_tooltips_match_spec(self, driver, tariff_index, xfail):
