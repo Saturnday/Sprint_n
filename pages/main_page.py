@@ -75,9 +75,8 @@ class MainPage(BasePage):
             return False
 
     @allure.step("Get price from tariff card")
-    @classmethod
-    def get_price_from_tariff_card(cls):
-        price_elem = cls.find_element_with_wait(MainPageLocators.TCARD_PRICE)
+    def get_price_from_tariff_card(self):
+        price_elem = self.find_element_with_wait(MainPageLocators.TCARD_PRICE)
         price_text = price_elem.text.strip()
         return price_text
 
