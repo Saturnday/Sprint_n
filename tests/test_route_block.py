@@ -9,7 +9,7 @@ from locators.locators import MainPageLocators #нужны для парамет
 @allure.suite("Проверка отрисовка маршрута, блока с выбором маршрута")
 class TestRoute:
 
-    @allure.step("Две точки на карте появляются после ввода двух разных адресов")
+    @allure.title("Две точки на карте появляются после ввода двух разных адресов")
     def test_two_different_addresses_two_markers(self, driver):
 
         page = MainPage(driver)
@@ -32,7 +32,7 @@ class TestRoute:
             (MainPageLocators.BUTTON_OPTIMAL, MainPageLocators.VEHICLE_BLOCK),
         ]
     )
-    @allure.step("При вводе двух разных предустановленных адресов в поля 'Откуда' и 'Куда' под выбором адресов отображается блок с выбором маршрута")
+    @allure.title("При вводе двух разных предустановленных адресов в поля 'Откуда' и 'Куда' под выбором адресов отображается блок с выбором маршрута")
     def test_route_block_appears(self, driver, button_locator, VEHICLE_BLOCK):
         page = MainPage(driver)
         page.open()
@@ -41,7 +41,7 @@ class TestRoute:
         page.click_to_element_with_wait(button_locator)
         assert page.is_route_selection_block_visible(VEHICLE_BLOCK), "Блок с выбором маршрута не отображается"
 
-    @allure.step("При вводе одинакового адреса в поля 'Откуда' и 'Куда' под выбором адресов отображается блок с выбором маршрута с текстом 'Авто Бесплатно В пути 0 мин'")
+    @allure.title("При вводе одинакового адреса в поля 'Откуда' и 'Куда' под выбором адресов отображается блок с выбором маршрута с текстом 'Авто Бесплатно В пути 0 мин'")
     def test_route_block_with_same_addresses(self, driver):
         page = MainPage(driver)
         page.open()

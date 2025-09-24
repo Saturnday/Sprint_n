@@ -1,6 +1,5 @@
 import pytest
 from selenium import webdriver
-from helpers.generate_a_user import UserData
 
 
 @pytest.fixture
