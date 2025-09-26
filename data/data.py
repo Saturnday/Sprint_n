@@ -1,4 +1,5 @@
 import allure
+from locators.locators import MainPageLocators
 
 @allure.epic("Тестовые данные для тестов")
 class TestData:
@@ -29,4 +30,12 @@ class TestData:
             "Комментарий водителю",
             "Требования к заказу",
         ]
-
+    
+    TARIFF_LOCATORS = [
+    (MainPageLocators.TARIFF_WORK,      "Рабочий"),
+    (MainPageLocators.TARIFF_SLEEPY,    "Сонный"),
+    (MainPageLocators.TARIFF_HOLIDAY,   "Отпускной"),
+    (MainPageLocators.TARIFF_TALKATIVE, "Разговорчивый"),
+    (MainPageLocators.TARIFF_COMFORT,   "Утешительный"),
+    (MainPageLocators.TARIFF_GLOSSY,    "Глянцевый"),
+]
