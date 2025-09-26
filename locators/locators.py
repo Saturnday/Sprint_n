@@ -72,7 +72,6 @@ class MainPageLocators:
     TARIFF_COMFORT   = (By.XPATH, "//div[@class='tcard-title' and text()='Утешительный']")
     TARIFF_GLOSSY    = (By.XPATH, "//div[@class='tcard-title' and text()='Глянцевый']")
 
-    TARIFFS = [TARIFF_WORK, TARIFF_SLEEPY, TARIFF_HOLIDAY, TARIFF_TALKATIVE, TARIFF_COMFORT, TARIFF_GLOSSY]
 
     TARIFF_LOCATORS = [
     (TARIFF_WORK,      "Рабочий"),
