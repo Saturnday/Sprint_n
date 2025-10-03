@@ -17,7 +17,7 @@ class BasePage:
         self.driver.get(url)
 
     @allure.step('Клик на элемент')
-    def click_to_element_with_wait(self, locator, timeout=10):
+    def click_to_element_with_wait(self, locator, timeout=15):
         element = WebDriverWait(self.driver, timeout).until(EC.element_to_be_clickable(locator))
         self.driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
         try:

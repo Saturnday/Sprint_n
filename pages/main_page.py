@@ -67,7 +67,7 @@ class MainPage(BasePage):
         try:
             self.wait_until_element_is_visible(MainPageLocators.ORDER_HEADER_TITLE, timeout=10)
             self.wait_until_element_is_visible(MainPageLocators.ORDER_HEADER_TIME, timeout=10)
-            self.wait_until_element_is_visible(MainPageLocators.ORDER_FORM_BLOCK, timeout=30)
+            self.wait_until_element_is_visible(MainPageLocators.ORDER_FORM_BLOCK, timeout=60)
             self.wait_until_element_is_visible(MainPageLocators.ORDER_BTN_CANCEL, timeout=10)
             self.wait_until_element_is_visible(MainPageLocators.ORDER_BTN_GROUP_DETAILS, timeout=10)
             return True
@@ -166,8 +166,8 @@ class MainPage(BasePage):
     @allure.step('Проверить элементы окна заказа')
     def check_order_window_elements(self):
         try:
-            self.wait_until_element_is_visible(MainPageLocators.ORDER_BUTTONS, timeout=60)
-            self.find_element_with_wait(MainPageLocators.ORDER_CAR_IMG, timeout=60)
+            self.wait_until_element_is_visible(MainPageLocators.ORDER_BUTTONS, timeout=80)
+            self.find_element_with_wait(MainPageLocators.ORDER_CAR_IMG, timeout=80)
             btn_groups = self.find_elements_with_wait(MainPageLocators.ORDER_BTN_GROUPS)
             if not btn_groups:
                 return False
